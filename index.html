@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-onsenui"></script>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+
+<body>
+  <ons-page id="app">
+    <div class="search-bar-position">
+      <i class="fab fa-twitter" style="color: #1da1f2"></i>
+      <v-ons-input modifier="material" placeholder="@twitter account" v-model="twitterAccount"></v-ons-input>
+      <v-ons-button style="margin: 20px 80px" modifier="outline">Go</v-ons-button>
+    </div>
+    <p>{{ twitterAccount }}</p>
+  </ons-page>
+</body>
+
+<script>
+Vue.use(VueOnsen);
+var vm = new Vue({
+  el: '#app',
+  data() {
+    return {
+      twitterAccount: ""
+    };
+  }
+});
+</script>
+
+
